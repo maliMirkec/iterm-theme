@@ -35,3 +35,39 @@ Run this to see all 16 colors:
 ```sh
 for i in {0..15}; do printf "\e[48;5;${i}m  \e[0m"; done; echo
 ```
+
+## Where the colors come from
+
+The base colors come from the etty themes in `marta-themes`:
+
+- `CitaLight.ettyTheme` → `CitaLight.itermcolors`
+- `CitaDark.ettyTheme` → `CitaDark.itermcolors`
+
+Keys map like this:
+
+| etty | iTerm |
+| --- | --- |
+| `background` | Background Color |
+| `foreground` | Foreground Color |
+| `selection` | Selection Color |
+| `selectedText` | Selected Text Color |
+| `caret` | Cursor Color |
+| `caretText` | Cursor Text Color |
+| `ansiColors` | Ansi 0–15 Color |
+
+## Mint extras
+
+iTerm has a few colors etty doesn't have. They use Cita mint:
+
+| Color | Light | Dark |
+| --- | --- | --- |
+| Bold Color | `#0a7f5a` | `#63f2c5` |
+| Link Color | `#0a7f5a` | `#63f2c5` |
+| Cursor Guide Color | `#0a7f5a` | `#63f2c5` |
+
+The dark Selection Color is `#0f6652`, not the etty `#1a535e`. It gives more contrast in iTerm.
+
+## Related
+
+- `marta-themes` has the Marta and etty themes. Its config opens iTerm2 as the terminal.
+- `herdr-theme` has the Herdr themes with the same base colors.
