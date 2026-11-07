@@ -36,6 +36,14 @@ Run this to see all 16 colors:
 for i in {0..15}; do printf "\e[48;5;${i}m  \e[0m"; done; echo
 ```
 
+## Unreadable colors
+
+Some tools ignore the 16 preset colors and use fixed 256-color or true colors. iTerm can't change those, so they can be hard to read on Cita Light.
+
+lsd does this by default. Use the theme in `lsd-theme` to fix it.
+
+For other tools, raise "Minimum contrast" in Settings → Profiles → Colors. It's a profile setting, so the preset files can't store it.
+
 ## Where the colors come from
 
 The base colors come from the etty themes in `marta-themes`:
@@ -71,3 +79,4 @@ The dark Selection Color is `#0f6652`, not the etty `#1a535e`. It gives more con
 
 - `marta-themes` has the Marta and etty themes. Its config opens iTerm2 as the terminal.
 - `herdr-theme` has the Herdr themes with the same base colors.
+- `lsd-theme` has lsd colors that follow these presets.
