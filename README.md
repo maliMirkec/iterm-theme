@@ -38,6 +38,8 @@ for i in {0..15}; do printf "\e[48;5;${i}m  \e[0m"; done; echo
 
 ## Unreadable colors
 
+In Cita Light, black (0), white (7), and bright white (15) are light colors. All other colors are dark, so dark text on them was unreadable. Now labels like `INFO` and `ERROR` from tools like `vsce` have light text on a dark background.
+
 Some tools ignore the 16 preset colors and use fixed 256-color or true colors. iTerm can't change those, so they can be hard to read on Cita Light.
 
 lsd does this by default. Use [lsd-theme](https://github.com/maliMirkec/lsd-theme) to fix it. It maps lsd colors to the 16 preset colors, so lsd follows Cita Light and Cita Dark.
